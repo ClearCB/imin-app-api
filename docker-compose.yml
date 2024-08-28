@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+
+  db:
+    image: postgres:latest
+    container_name: my_postgres_dev_db
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ${INIT_SCRIPT_DB_PATH}:/docker-entrypoint-initdb.d/init.sql
+
+#  api-business:
+##    image: clearcb/imin-api-business:latest
+#    build:
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - db
+#    environment:
+#      SPRING_APPLICATION_NAME: ${SPRING_APPLICATION_NAME}
+#      APP_SECURITY_JWT_SECRET: ${APP_SECURITY_JWT_SECRET}
+#      APP_SECURITY_JWT_EXPIRATION: ${APP_SECURITY_JWT_EXPIRATION}
+#      SPRING_DATASOURCE_URL: ${JDBC_DB_TYPE}://${DB_SERVER}:${DB_PORT}/${DB_NAME}
+#      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+#      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+#      SPRING_DATASOURCE_DRIVER_CLASS_NAME: ${DB_DRIVER_NAME}
+#      SPRING_JPA_DATABASE_PLATFORM: ${DB_PLATFORM}
+#      SPRING_JPA_SHOW_SQL: true
+#      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+#    volumes:
+#      - ./src:/app/src
+
+  angular-app:
+    image: clearcb/imin-app:latest
+#    depends_on:
+#      - api-business
+    ports:
+      - "4200:80"
+
+volumes:
+  db_data:

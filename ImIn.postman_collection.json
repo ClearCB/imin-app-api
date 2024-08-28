@@ -1,0 +1,1112 @@
+{
+	"info": {
+		"_postman_id": "747db34c-b0c9-48ea-8252-474639211a88",
+		"name": "ImIn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26303640",
+		"_collection_link": "https://www.postman.com/descent-module-architect-44376649/workspace/flaskapp/collection/26303640-747db34c-b0c9-48ea-8252-474639211a88?action=share&source=collection_link&creator=26303640"
+	},
+	"item": [
+		{
+			"name": "Authenticator",
+			"item": [
+				{
+					"name": "OkEventAuth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actorId\": \"1ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n    \"objectId\": \"5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n    \"actionId\": \"b8ecacdd-4e68-4a4c-b3de-65f22a289f44\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}event",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OkCommunityAuth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actorId\": \"1ae70aa2-2f09-4c0f-85940-f8ad514cfb4e\",\r\n    \"objectId\": \"3ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n    \"actionId\": \"b8ecacdd-4e68-4a4c-b3de-65f22a289f44\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}community",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}community"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KoCommunityAuth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actorId\": \"d6d8f0a7-145f-4969-89e2-46ee34f7a7e6\",\r\n    \"objectId\": \"3ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n    \"actionId\": \"b8ecacdd-4e68-4a4c-b3de-65f22a289f44\"\r\n}\r\n// 1ae70aa2-2f09-4c0f-8940-f8ad514cfb4e valid user \r\n// b8ecacdd-4e68-4a4c-b3de-65f22a289f44 valid action\r\n// 3ae70aa2-2f09-4c0f-8940-f8ad514cfb4e valid community",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}community",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}community"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KoEventAuth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actorId\": \"d6d8f0a7-145f-4969-89e2-46ee34f7a7e6\",\r\n    \"objectId\": \"5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n    \"actionId\": \"b8ecacdd-4e68-4a4c-b3de-65f22a289f44\"\r\n}\r\n// 1ae70aa2-2f09-4c0f-8940-f8ad514cfb4e valid user \r\n// b8ecacdd-4e68-4a4c-b3de-65f22a289f44 valid action\r\n// 5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e valid event",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}event",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_AUTHORIZATION_ENPOINT}}event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin1\",\r\n    \"password\":\"password\",\r\n    \"confirmationPassword\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Assuming you already have the response object available\r",
+									"// If not, ensure you're inside a test script where the response object is accessible\r",
+									"// Check if the response status is 200 (OK)\r",
+									"\r",
+									"if (responseBody) {\r",
+									"    // Parse the response body as JSON\r",
+									"    var responseBody = JSON.parse(responseBody);\r",
+									"\r",
+									"    // Check if the response contains the token\r",
+									"    if (responseBody.userData && responseBody.userData.token) {\r",
+									"        // Extract the token from the response\r",
+									"        var token = responseBody.userData.token;\r",
+									"\r",
+									"        // Save the token to environment variables\r",
+									"        pm.collectionVariables.set('token', token);\r",
+									"\r",
+									"        // Log a message indicating successful token retrieval and saving\r",
+									"        console.log('Token successfully retrieved and saved:', token);\r",
+									"    } else {\r",
+									"        // Log a message indicating that the token was not found in the response\r",
+									"        console.error('Token not found in the response');\r",
+									"    }\r",
+									"} else {\r",
+									"    // Log a message indicating that the response status is not 200\r",
+									"    console.error('Response status is not 200');\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_AUTH_URL}}login",
+							"host": [
+								"{{API_AUTH_URL}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Assuming you already have the response object available\r",
+									"// If not, ensure you're inside a test script where the response object is accessible\r",
+									"// Check if the response status is 200 (OK)\r",
+									"\r",
+									"if (responseBody) {\r",
+									"    // Parse the response body as JSON\r",
+									"    var responseBody = JSON.parse(responseBody);\r",
+									"\r",
+									"    // Check if the response contains the token\r",
+									"    if (responseBody.userData && responseBody.userData.token) {\r",
+									"        // Extract the token from the response\r",
+									"        var token = responseBody.userData.token;\r",
+									"\r",
+									"        // Save the token to environment variables\r",
+									"        pm.collectionVariables.set('token', token);\r",
+									"\r",
+									"        // Log a message indicating successful token retrieval and saving\r",
+									"        console.log('Token successfully retrieved and saved:', token);\r",
+									"    } else {\r",
+									"        // Log a message indicating that the token was not found in the response\r",
+									"        console.error('Token not found in the response');\r",
+									"    }\r",
+									"} else {\r",
+									"    // Log a message indicating that the response status is not 200\r",
+									"    console.error('Response status is not 200');\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_AUTH_URL}}validate-token",
+							"host": [
+								"{{API_AUTH_URL}}validate-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "CreateEvent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"MYSUPERSTITLE\",\r\n    \"smallDescription\": \"mysmalldescription\",\r\n    \"largeDescription\": \"largeDescription\",\r\n    \"locationName\": \"Library1234567891\",\r\n    \"latitude\": 40.878,\r\n    \"longitude\": -87.6298,\r\n    \"isOnline\": true,\r\n    \"startDate\":\"2024-05-15T00:00:00\",\r\n    \"finishDate\": \"2024-05-15T00:00:00\",\r\n    \"tags\":[\r\n        ],\r\n    \"categories\":[{\"id\":8}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}create",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEvent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response is in JSON format\", function () {",
+									"  pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData).to.be.an('object');",
+									"  pm.expect(responseData.id).to.exist.and.to.be.a('string');",
+									"  pm.expect(responseData.title).to.exist.and.to.be.a('string');",
+									"  pm.expect(responseData.smallDescription).to.exist.and.to.be.a('string');",
+									"  pm.expect(responseData.largeDescription).to.exist.and.to.be.a('string');",
+									"  pm.expect(responseData.locationDTO).to.exist.and.to.be.an('object');",
+									"});",
+									"",
+									"pm.test(\"Location name is a non-empty string\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData.locationDTO).to.exist.and.to.be.an('object');",
+									"  pm.expect(responseData.locationDTO.name).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Latitude and longitude should be numbers\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.locationDTO.latitude).to.be.a('number');",
+									"    pm.expect(responseData.locationDTO.longitude).to.be.a('number');",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}get/6ae70aa2-2f09-4c0f-8940-f8ad514cfb4e",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}get"
+							],
+							"path": [
+								"6ae70aa2-2f09-4c0f-8940-f8ad514cfb4e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllEvent",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}get-all",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchEvents",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"searchCriteriaList\": [\r\n        {\r\n            \"filterKey\": \"isOnline\",\r\n            \"operation\": \"eq\",\r\n            \"value\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}search",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddUserToEvent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"userId\": \"2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n\t\"eventId\": \"5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}add-user",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}add-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserAttendance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}user/event/attendance/2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}user"
+							],
+							"path": [
+								"event",
+								"attendance",
+								"2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsersEvent",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}user/event/2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}user"
+							],
+							"path": [
+								"event",
+								"2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventAttendance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"userId\": \"2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n\t\"eventId\": \"5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}event/user/5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}event"
+							],
+							"path": [
+								"user",
+								"5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveUserFromEvent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"userId\": \"2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n\t\"eventId\": \"5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}remove-user",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}remove-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchEventsPaginated",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataOption\":\"all\",\r\n    \"searchCriteriaList\":[\r\n       {\r\n          \"filterKey\":\"latitude\",\r\n          \"operation\":\"gt\",\r\n          \"value\": 20\r\n       },\r\n       {\r\n          \"filterKey\":\"latitude\",\r\n          \"operation\":\"lt\",\r\n          \"value\": 34\r\n       },\r\n       {\r\n          \"filterKey\":\"longitude\",\r\n          \"operation\":\"gt\",\r\n          \"value\": -90\r\n       },\r\n       {\r\n          \"filterKey\":\"longitude\",\r\n          \"operation\":\"lt\",\r\n          \"value\": -80\r\n       }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}search?pageSize=5&pageNum=0",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}search"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "5"
+								},
+								{
+									"key": "pageNum",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEvent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"123sf\",\r\n    \"smallDescription\":\"qsfd\",\r\n    \"largeDescription\":\"qsfd\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}delete/dba400f2-94ab-405b-8fb9-fb9d685bcd6b",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}delete"
+							],
+							"path": [
+								"dba400f2-94ab-405b-8fb9-fb9d685bcd6b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEvent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"5ae70aa2-2f09-4c0f-8940-f8ad514cfb4e\",\r\n    \"title\": \"12322222sf\",\r\n    \"smallDescription\": \"q2222245756867822222sfd\",\r\n    \"largeDescription\": \"q2222222sf4345646756uefgfddffddfd\",\r\n    \"locationName\": \"Library\",\r\n    \"latitude\": 41.8781,\r\n    \"longitude\": -87.6298,\r\n            \"tags\":[{\"id\":1}],\r\n        \"categories\":[{\"id\":2}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}update/6ae70aa2-2f09-4c0f-8940-f8ad514cfb4e",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EVENT_ENDPOINT}}update"
+							],
+							"path": [
+								"6ae70aa2-2f09-4c0f-8940-f8ad514cfb4e"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Common",
+			"item": [
+				{
+					"name": "GetAllCategories",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_COMMON_ENDPOINT}}categories",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_COMMON_ENDPOINT}}categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllTags",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_COMMON_ENDPOINT}}tags",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_COMMON_ENDPOINT}}tags"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "GetEventImage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/xuloa/OneDrive/Imágenes/luna.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_IMAGE_ENDPOINT}}get/6ae70aa2-2f09-4c0f-8940-f8ad514cfb4e",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_IMAGE_ENDPOINT}}get"
+							],
+							"path": [
+								"6ae70aa2-2f09-4c0f-8940-f8ad514cfb4e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/xuloa/OneDrive/Imágenes/luna.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_IMAGE_ENDPOINT}}delete/b39f4cb3-9bf6-42c8-98c1-3aff36e78f9c",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_IMAGE_ENDPOINT}}delete"
+							],
+							"path": [
+								"b39f4cb3-9bf6-42c8-98c1-3aff36e78f9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "image/png",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "eventId",
+									"value": "6ae70aa2-2f09-4c0f-8940-f8ad514cfb4e",
+									"type": "text"
+								},
+								{
+									"key": "mainImage",
+									"type": "file",
+									"src": "/C:/Users/xuloa/Downloads/generic.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_IMAGE_ENDPOINT}}upload",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_IMAGE_ENDPOINT}}upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "SendEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\":\"abelcasasccb@gmail.com\",\r\n    \"cc\":\"ipopdue24@gmail.com\",\r\n    \"subject\":\"subject\",\r\n    \"message\":\"message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_BUSINESS_URL}}{{API_EMAIL_ENDPOINT}}send-email",
+							"host": [
+								"{{API_BUSINESS_URL}}{{API_EMAIL_ENDPOINT}}send-email"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_BUSINESS_URL",
+			"value": "http://localhost:8080/api/v1/",
+			"type": "string"
+		},
+		{
+			"key": "API_EVENT_ENDPOINT",
+			"value": "event/",
+			"type": "string"
+		},
+		{
+			"key": "API_COMMON_ENDPOINT",
+			"value": "common/",
+			"type": "string"
+		},
+		{
+			"key": "API_IMAGE_ENDPOINT",
+			"value": "image/",
+			"type": "string"
+		},
+		{
+			"key": "API_EMAIL_ENDPOINT",
+			"value": "email/",
+			"type": "string"
+		},
+		{
+			"key": "API_COMMUNITY_ENDPOINT",
+			"value": "community/",
+			"type": "string"
+		},
+		{
+			"key": "API_AUTHORIZATION_ENPOINT",
+			"value": "auth/authorize/",
+			"type": "string"
+		},
+		{
+			"key": "API_LOCATION_ENDPOINT",
+			"value": "location/",
+			"type": "string"
+		},
+		{
+			"key": "API_AUTH_URL",
+			"value": "http://localhost:8080/auth/",
+			"type": "string"
+		},
+		{
+			"key": "API_AUTH_LOGIN_ENPOINT",
+			"value": "http://localhost:8080/auth/login",
+			"type": "string"
+		},
+		{
+			"key": "API_AUTH_REGISTER_ENPOINT",
+			"value": "register",
+			"type": "string"
+		},
+		{
+			"key": "USERNAME",
+			"value": "admin",
+			"type": "string"
+		},
+		{
+			"key": "PASSWORD",
+			"value": "password",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

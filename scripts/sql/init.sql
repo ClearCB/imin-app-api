@@ -167,7 +167,7 @@ INSERT INTO "auth"."role_permission" (role_id, permission_id) VALUES
 
 INSERT INTO "auth"."user" (id, username, email, password, role) VALUES
   ('1ae70aa2-2f09-4c0f-8940-f8ad514cfb4e', 'john_doe', 'acasasgarcia1@cifpfbmoll.eu','$2a$10$AZCwDfZBWochcelWIxeo4udksBBctSccxZ/ZrcJkMFblSqxJTfkZu','ADMIN'),
-  ('1fa34d17-6d33-4b16-a75b-d2b6f165bdfd', 'admin', 'abelcasasccb@gmail.com','$2a$10$AZCwDfZBWochcelWIxeo4udksBBctSccxZ/ZrcJkMFblSqxJTfkZu','ADMIN'),
+  ('1fa34d17-6d33-4b16-a75b-d2b6f165bdfd', 'admin', 'acasasdev@gmail.com','$2a$10$AZCwDfZBWochcelWIxeo4udksBBctSccxZ/ZrcJkMFblSqxJTfkZu','ADMIN'),
   ('2ae70aa2-2f09-4c0f-8940-f8ad514cfb4e', 'jane_doe', 'jane_doe@example.com','$2a$10$AZCwDfZBWochcelWIxeo4udksBBctSccxZ/ZrcJkMFblSqxJTfkZu','USER');
 
 INSERT INTO "dbo".community (id, name) VALUES

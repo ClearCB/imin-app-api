@@ -4,7 +4,7 @@ Este proyecto consiste en el desarrollo de una aplicación web para la gestión 
 
 ## Imporante
 
-El proyecto está formado por dos aplicaciones principales: una [api](https://github.com/ClearCB/imin-app-api) hecha en Java y una [app](https://github.com/ClearCB/imin-app) hecha en Angular. Además, forma parte de una entrega de un trabajo de fin de grado superior de Desarrollo de Aplicaciones web. Haga [click aquí](./docs/ImIn-V1.0-Abel-Casas.docx.pdf) para más información sobre el mismo.
+El proyecto está formado por dos aplicaciones principales: una [api](https://github.com/ClearCB/imin-app-api) hecha en Java y una [app](https://github.com/ClearCB/imin-app) hecha en Angular. Además, forma parte de una entrega de un trabajo de fin de grado superior de Desarrollo de Aplicaciones web. Haga [click aquí](./docs/ImIn-V1.0-Abel-Casas.pdf) para más información sobre el mismo.
 
 ## Tecnologías Utilizadas
 

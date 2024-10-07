@@ -1,106 +1,112 @@
-# business-api
+# Gestión de Eventos, Planes y Comunidades
 
+Este proyecto consiste en el desarrollo de una aplicación web para la gestión de eventos, planes y comunidades. La aplicación tiene como objetivo principal facilitar la organización, promoción y participación en eventos locales, mejorando así la interacción social y la conexión entre las personas y su entorno.
 
+## Imporante
 
-## Getting started
+El proyecto está formado por dos aplicaciones principales: una [api](https://github.com/ClearCB/imin-app-api) hecha en Java y una [app](https://github.com/ClearCB/imin-app) hecha en Angular. Además, forma parte de una entrega de un trabajo de fin de grado superior de Desarrollo de Aplicaciones web. Haga [click aquí](./docs/ImIn-V1.0-Abel-Casas.docx.pdf) para más información sobre el mismo.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Tecnologías Utilizadas
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- **Backend**: Spring Framework con Java 21
+- **Frontend**: Angular 17
+- **Base de Datos**: PostgreSQL
+- **Autenticación y Autorización**: Spring Security y JWT
+- **CI/CD**: Docker, Docker Compose, GitHub Actions
+- **Despliegue**: VPS de IONOS con Nginx y Certbot para HTTPS
 
-## Add your files
+## Principios y Buenas Prácticas
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+El proyecto se ha desarrollado siguiendo los principios SOLID y otras buenas prácticas de programación para asegurar una arquitectura robusta, mantenible y escalable. Además, se ha realizado un análisis exhaustivo del dominio y se ha generado un diagrama E-R detallado.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/clearcb/business-api.git
-git branch -M main
-git push -uf origin main
-```
+## Estructura del Proyecto
 
-## Integrate with your tools
+![arch image](./imgs/arch.png)
 
-- [ ] [Set up project integrations](https://gitlab.com/clearcb/business-api/-/settings/integrations)
+### Backend (API en Spring)
 
-## Collaborate with your team
+El backend se ha desarrollado utilizando Spring Framework, adoptando una arquitectura en capas (Controller, Service, Repository) que facilita la separación de preocupaciones y mejora la mantenibilidad.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+#### Características del Backend
 
-## Test and Deploy
+- **RESTful API**: Implementación de endpoints RESTful siguiendo los estándares HTTP.
+- **Spring Boot**: Para una configuración simplificada y un despliegue rápido.
+- **Spring Data JPA**: Para la persistencia de datos con PostgreSQL.
+- **Spring Security**: Para la gestión de autenticación y autorización.
+- **JWT (JSON Web Tokens)**: Para la implementación de un sistema de autenticación robusto.
+- **Validación**: Uso de Hibernate Validator para la validación de datos de entrada.
 
-Use the built-in continuous integration in GitLab.
+#### Endpoints Principales
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+- `/api/events`: Gestión de eventos (creación, actualización, eliminación, listado).
+- `/api/auth`: Autenticación y autorización (login, registro, validación de tokens).
 
-***
+### Frontend (Aplicación en Angular)
 
-# Editing this README
+La aplicación frontend está desarrollada en Angular, proporcionando una interfaz de usuario intuitiva y responsive.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+#### Características del Frontend
 
-## Suggestions for a good README
+- **SPA (Single Page Application)**: Experiencia de usuario fluida y rápida.
+- **Angular CLI**: Herramientas de línea de comandos para facilitar el desarrollo y el despliegue.
+- **Componentes Reutilizables**: Diseño de componentes modulares y reutilizables.
+- **Servicios y RxJS**: Gestión eficiente de datos y comunicación con el backend.
+- **Rutas Protegidas**: Implementación de guardas para rutas que requieren autenticación.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Integración y Despliegue (CI/CD con Docker)
 
-## Name
-Choose a self-explaining name for your project.
+Se ha implementado un entorno de CI/CD utilizando Docker y Docker Compose para asegurar despliegues consistentes y reproducibles.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+#### Características del CI/CD
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+- **Docker**: Contenedorización de aplicaciones para un entorno homogéneo.
+- **Docker Compose**: Orquestación de contenedores para el desarrollo y pruebas locales.
+- **GitHub Actions**: Configuración de pipelines para la integración continua. Construcción de imágenes Docker de ambas partes de la aplicación.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Despliegue en VPS de IONOS
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+El despliegue de la aplicación se ha realizado en un VPS de IONOS utilizando Nginx como servidor web y Certbot para la gestión de certificados SSL.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+#### Pasos del Despliegue
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+1. **Preparación del VPS**: Configuración inicial del servidor, incluyendo actualización de paquetes y configuración de firewall.
+2. **Dockerización**: Creación de imágenes Docker para backend, frontend y base de datos.
+3. **Nginx**: Configuración de Nginx como reverse proxy para enrutar el tráfico a los contenedores correspondientes.
+4. **SSL**: Implementación de HTTPS utilizando Certbot y Let's Encrypt.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## Funcionalidades Principales
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- **Exploración de Eventos**: Los usuarios pueden buscar y descubrir eventos locales utilizando filtros por localización y fechas.
+- **Geolocalización**: Implementación de un sistema de geolocalización preciso para descubrir lugares y eventos cercanos.
+- **Registro y Participación**: Proceso sencillo para que los usuarios se registren y participen en eventos.
+- **Notificaciones**: Sistema de notificaciones para mantener informados a los usuarios sobre eventos y actualizaciones.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+## Fases del Proyecto
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+### 1. Planificación
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+Definición de objetivos, alcance y cronograma de trabajo. Identificación de stakeholders y establecimiento de requisitos iniciales.
 
-## License
-For open source projects, say how it is licensed.
+![arch image](./imgs/use-case.png)
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+### 2. Análisis
 
+Análisis exhaustivo de los requisitos del proyecto y necesidades de los usuarios. Elaboración del modelo de dominio y generación del diagrama E-R.
 
-## Keycloack
+![arch image](./imgs/db-diagram.png)
 
-http://localhost:9090/realms/spring-boot-realm-dev/.well-known/openid-configuration/
+### 3. Diseño
 
-## Docker 
+Creación de la arquitectura del sistema y elaboración de prototipos. Diseño de la base de datos y planificación de la estructura del código.
 
-mvn spring-boot:run
+![arch image](./imgs/use-case-2.png)
 
-docker build -t clearcb/imin-api-business:latest .
-docker push clearcb/imin-api-business:latest
+![arch image](./imgs/class-diagram-app.png)
 
+### 4. Desarrollo
+
+Implementación de funcionalidades siguiendo principios SOLID y buenas prácticas de programación. Desarrollo iterativo e incremental con revisiones constantes. Se ha utilizado arquitectura hexagonal tanto en el front como en el back, lo que ha permitido desarrollar de manera robusta y flexible. Esta elección arquitectónica asegura que el sistema pueda escalar y adaptarse fácilmente a futuras funcionalidades y cambios. La aplicación se ha desarrollado hasta la primera gran funcionalidad, los "eventos", con una base sólida que facilita la expansión futura.
+
+### 5. Lanzamiento
+
+Despliegue en VPS y promoción de la aplicación. Configuración de monitorización y análisis de métricas para evaluar el rendimiento y la aceptación por parte de los usuarios.
